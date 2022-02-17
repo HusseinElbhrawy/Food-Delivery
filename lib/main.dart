@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/screens/verify/verify_screen.dart';
+import 'package:food_delivery/screens/home/home_screen.dart';
 import 'package:food_delivery/shared/config/colors.dart';
 import 'package:food_delivery/shared/cubit/observer.dart';
 
@@ -21,12 +21,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Food Delivery',
       theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
         appBarTheme: const AppBarTheme(
           color: Color(kDefaultBackgroundColor),
           elevation: 0.0,
         ),
       ),
-      home: VerifyScreen(),
+      home: HomeScreen(),
     );
   }
 }
