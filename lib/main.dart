@@ -1,9 +1,16 @@
+import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-import 'package:food_delivery/screens/intro/inro_screen.dart';
+import 'package:food_delivery/screens/login/login_screen.dart';
 import 'package:food_delivery/shared/config/colors.dart';
+import 'package:food_delivery/shared/cubit/observer.dart';
 
 void main() {
-  runApp(const MyApp());
+  BlocOverrides.runZoned(
+    () {
+      runApp(const MyApp());
+    },
+    blocObserver: MyBlocObserver(),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -19,7 +26,7 @@ class MyApp extends StatelessWidget {
           elevation: 0.0,
         ),
       ),
-      home: IntroScreen(),
+      home: LoginScreen(),
     );
   }
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery/shared/config/const.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../shared/config/colors.dart';
 import 'components/custom_button.dart';
@@ -21,7 +22,9 @@ class IntroScreen extends StatelessWidget {
         children: [
           Align(
             alignment: Alignment.topCenter,
-            child: Image.asset('assets/images/image.png'),
+            child: Lottie.network(
+              'https://assets6.lottiefiles.com/packages/lf20_jm1zwwig.json',
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(kDefaultPadding * 2),
@@ -37,7 +40,7 @@ class IntroScreen extends StatelessWidget {
                 children: [
                   const Padding(
                     padding: EdgeInsets.all(kDefaultPadding * 1),
-                    child: TitleAndLogo(),
+                    child: TitleAndLogo(inLoginScreen: false),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -72,7 +75,12 @@ class IntroScreen extends StatelessWidget {
                       textAlign: TextAlign.center,
                     ),
                   ),
-                  CustomButton(width: width, height: height),
+                  CustomButton(
+                      width: width / 1.3,
+                      height: height / 12,
+                      color: const Color(0xffFF5556),
+                      onTap: () {},
+                      text: 'Let’s Order 😋'),
                 ],
               ),
             ),
