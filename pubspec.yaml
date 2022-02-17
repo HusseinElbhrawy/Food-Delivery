@@ -37,9 +37,11 @@ dependencies:
   lottie: ^1.2.2
   flutter_svg_provider: ^1.0.3
   intl_phone_field: ^3.0.1
+  pinput: ^1.2.2
   #state Management
   bloc: ^8.0.2
   flutter_bloc: ^8.0.1
+
 
 dev_dependencies:
   flutter_test:

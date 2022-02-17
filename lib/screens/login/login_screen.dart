@@ -81,7 +81,7 @@ class LoginScreen extends StatelessWidget {
                   width: width / 1.15,
                   height: height / 12,
                   onTap: () {},
-                  color: const Color(0xffFFA0A0),
+                  color: const Color(kSecondColor),
                   text: 'Create new account',
                 ),
               ),
