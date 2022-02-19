@@ -40,9 +40,14 @@ dependencies:
   pinput: ^1.2.2
   dropdown_button2: ^1.1.1
   animated_bottom_navigation_bar: ^0.3.2
+  shared_preferences: ^2.0.13
   #state Management
   bloc: ^8.0.2
   flutter_bloc: ^8.0.1
+  replay_cubit:
+  #Firebase
+  firebase_core: ^1.12.0
+  firebase_auth: ^3.3.7
 
 
 dev_dependencies:

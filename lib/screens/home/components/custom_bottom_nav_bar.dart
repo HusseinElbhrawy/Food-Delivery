@@ -1,13 +1,15 @@
 import 'package:animated_bottom_navigation_bar/animated_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
+import '../../../shared/cubit/bloc/home_screen_bloc.dart';
+
 class CustomBottomNavigationBar extends StatelessWidget {
   const CustomBottomNavigationBar({
     Key? key,
-    required this.icons,
+    required this.homeScreenBloc,
   }) : super(key: key);
 
-  final List<IconData> icons;
+  final HomeScreenBloc homeScreenBloc;
 
   @override
   Widget build(BuildContext context) {
@@ -17,9 +19,11 @@ class CustomBottomNavigationBar extends StatelessWidget {
       gapLocation: GapLocation.center,
       notchSmoothness: NotchSmoothness.sharpEdge,
       backgroundColor: Colors.white,
-      onTap: (index) {},
-      activeIndex: 0,
-      icons: icons,
+      onTap: (newIndex) {
+        Navigator.pushNamed(context, homeScreenBloc.screens[newIndex]);
+      },
+      activeIndex: homeScreenBloc.currentIndex,
+      icons: homeScreenBloc.icons,
     );
   }
 }

@@ -9,17 +9,17 @@ class VerifyCodeForm extends StatelessWidget {
     required this.width,
     required FocusNode pinPutFocusNode,
     required TextEditingController pinPutController,
+    required this.onSubmit,
     required BoxDecoration pinPutDecoration,
   })  : _pinPutFocusNode = pinPutFocusNode,
         _pinPutController = pinPutController,
         _pinPutDecoration = pinPutDecoration,
         super(key: key);
-
   final double width;
   final FocusNode _pinPutFocusNode;
   final TextEditingController _pinPutController;
   final BoxDecoration _pinPutDecoration;
-
+  final Function onSubmit;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -28,7 +28,8 @@ class VerifyCodeForm extends StatelessWidget {
           ? width / 1.2
           : width / 2.5,
       child: PinPut(
-        fieldsCount: 4,
+        onSubmit: (pin) => onSubmit(pin),
+        fieldsCount: 6,
         focusNode: _pinPutFocusNode,
         controller: _pinPutController,
         submittedFieldDecoration: _pinPutDecoration.copyWith(

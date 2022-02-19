@@ -1,38 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_delivery/shared/IconBroken.dart';
 import 'package:food_delivery/shared/config/const.dart';
 import 'package:food_delivery/shared/cubit/bloc/home_screen_bloc.dart';
+import 'package:food_delivery/shared/cubit/states.dart';
 
-import '../../shared/cubit/states.dart';
 import 'components/appbar_decoration.dart';
 import 'components/categories_list_widget.dart';
-import 'components/custom_bottom_navigation_bar.dart';
 import 'components/custom_icon_button.dart';
 import 'components/item_widget.dart';
 import 'components/title_seeall.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key? key}) : super(key: key);
-  List<IconData> icons = [
-    IconBroken.Home,
-    IconBroken.Heart,
-    IconBroken.Bag_2,
-    IconBroken.User1,
-  ];
+  const HomeScreen({Key? key}) : super(key: key);
+  static const routeName = 'HomeScreen';
+
   @override
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height;
     var width = MediaQuery.of(context).size.width;
-    return Scaffold(
-      body: BlocProvider(
-        create: (BuildContext context) => HomeScreenBloc(),
-        child: BlocConsumer<HomeScreenBloc, DeliveryStates>(
-          listener: (BuildContext context, state) {},
-          builder: (BuildContext context, Object? state) {
-            var homeScreenCubit = HomeScreenBloc.object(context);
-
-            return CustomScrollView(
+    return BlocProvider(
+      create: (BuildContext context) => HomeScreenBloc(),
+      child: BlocConsumer<HomeScreenBloc, DeliveryStates>(
+        listener: (BuildContext context, state) {},
+        builder: (BuildContext context, Object? state) {
+          var homeScreenCubit = HomeScreenBloc.object(context);
+          return Scaffold(
+            body: CustomScrollView(
               physics: const BouncingScrollPhysics(),
               slivers: [
                 SliverAppBar(
@@ -125,18 +118,10 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            );
-          },
-        ),
+            ),
+          );
+        },
       ),
-      bottomNavigationBar: CustomBottomNavigationBar(icons: icons),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Color(0xffF54748),
-        onPressed: () {},
-        child: Icon(IconBroken.Search),
-      ),
-      // bottomNavigationBar: ,
     );
   }
 }

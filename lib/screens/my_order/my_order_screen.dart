@@ -4,6 +4,7 @@ import 'package:food_delivery/shared/config/colors.dart';
 
 class MyOrderScreen extends StatelessWidget {
   const MyOrderScreen({Key? key}) : super(key: key);
+  static const routeName = 'MyOrderScreen';
 
   @override
   Widget build(BuildContext context) {

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery/screens/login/login_screen.dart';
+import 'package:food_delivery/shared/cahced/cahced_helper.dart';
 import 'package:food_delivery/shared/config/const.dart';
 import 'package:lottie/lottie.dart';
 
@@ -8,6 +10,7 @@ import 'components/title_logo.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
+  static const routeName = 'IntroScreen';
 
   @override
   Widget build(BuildContext context) {
@@ -79,7 +82,13 @@ class IntroScreen extends StatelessWidget {
                       width: width / 1.3,
                       height: height / 12,
                       color: const Color(0xffFF5556),
-                      onTap: () {},
+                      onTap: () {
+                        CachedHelper.setData(key: kFirstTime, value: false);
+                        Navigator.pushReplacementNamed(
+                          context,
+                          LoginScreen.routeName,
+                        );
+                      },
                       text: 'Let’s Order 😋'),
                 ],
               ),
