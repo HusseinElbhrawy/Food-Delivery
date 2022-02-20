@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:food_delivery/screens/home/home_screen.dart';
+import 'package:food_delivery/screens/layout/layout_screen.dart';
 import 'package:food_delivery/shared/cahced/cahced_helper.dart';
 import 'package:food_delivery/shared/config/colors.dart';
 import 'package:food_delivery/shared/config/const.dart';
@@ -91,7 +91,7 @@ class VerifyScreen extends StatelessWidget {
                           );
                           Navigator.pushReplacementNamed(
                             context,
-                            HomeScreen.routeName,
+                            LayoutScreen.routeName,
                           );
                         }
                       });
