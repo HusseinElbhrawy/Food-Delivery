@@ -1,16 +1,19 @@
-# food_delivery
+# Food Delivey 
 
-A new Flutter project.
+A new Flutter project ,with phone auth , google map 
 
-## Getting Started
+## videos 
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+https://user-images.githubusercontent.com/64389727/154840938-b07b4c1e-be89-4a21-bf5e-c3d69d5d3ecc.mp4
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
+## screens
+
+![3](https://user-images.githubusercontent.com/64389727/154840869-219bd223-5b19-413b-a3cb-93d7f668c009.png)
+![6](https://user-images.githubusercontent.com/64389727/154840909-c45594b2-25aa-4009-8431-1393ebd45834.png)
+![9](https://user-images.githubusercontent.com/64389727/154840880-8bb5119b-1530-4c63-a98d-16fe3b3e4942.png)
+
+
